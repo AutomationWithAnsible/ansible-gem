@@ -1,0 +1,18 @@
+---
+
+dependencies: []
+
+galaxy_info:
+
+  author:              Mohamed Ghaleb
+  description: >
+    Ruby gems setup.
+  license: MIT
+  min_ansible_version: 1.9.6
+  platforms:
+    - name: Ubuntu
+      versions:
+        - Precise
+  categories:
+    - web
+    - development

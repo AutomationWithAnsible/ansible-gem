@@ -1,0 +1,14 @@
+---
+
+- name: Inatalling gem packages
+  gem:
+    name:                 "{{ item.name }}"
+    executable:           "{{ item.executable | default(omit) }}"
+    gem_source:           "{{ item.gem_source | default(omit) }}"
+    include_dependencies: "{{ item.include_dependencies | default(omit) }}"
+    pre_release:          "{{ item.pre_release | default(omit) }}"
+    repository:           "{{ item.repository | default(omit) }}"
+    state:                "{{ item.state | default('present') }}"
+    user_install:         "{{ item.user_install | default(false) | bool }}"
+    version:              "{{ item.version | default(omit) }}"
+  with_items: gem_packages
