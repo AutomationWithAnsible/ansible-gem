@@ -11,4 +11,4 @@
     state:                "{{ item.state | default('present') }}"
     user_install:         "{{ item.user_install | default(false) | bool }}"
     version:              "{{ item.version | default(omit) }}"
-  with_items: gem_packages
+  with_items: "{{ gem_packages }}"
